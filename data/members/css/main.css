@@ -1,0 +1,128 @@
+.members-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px; /* 设置网格间隙 */
+    padding: 10px;
+    font-size: 75%;
+}
+
+.member {
+    text-align: center;
+    border-radius: 10px;
+    background: #004297;
+    padding: 20px;
+    animation: fade-in 0.5s ease-out;
+}
+
+.member.show:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+    position: relative;
+    top: -5px;
+    transition: 0.5s ease-out;
+    box-shadow: 0 0 10px #004297;
+}
+
+.member:not(.show) {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+}
+
+.member.show {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.member img {
+    background-color: gray;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.model-container {
+    background: #00000080;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+
+}
+
+.model {
+    max-width: 800px;
+    background: #E0E0E0E0;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #E0E0E0;
+    padding: 40px;
+    margin: 100px auto;
+    color: #333;
+    min-height: 300px;
+}
+
+.model-header {
+    border-bottom: 1px solid #00000030;
+    padding-bottom: 20px;
+}
+
+.model-content img {
+    display: block;
+    float: right;
+    margin: 20px;
+    background: gray;
+    max-width: 100px;
+    width: 100px;
+    max-height: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.model-content {
+    padding-top: 20px;
+}
+
+.model-header button {
+    float: right;
+    position: relative;
+    top: 0;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background: #3282e9;
+    border: none;
+    color: white;
+    font-family: inherit;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.model-header button:hover {
+    top: -2px;
+    filter: brightness(1.1);
+    box-shadow: 0 2px 10px #00000080;
+}
+
+.model-header button:active {
+    top: 0;
+    filter: brightness(0.9);
+}
+
+@media (max-width: 300px) {
+    .model-content img {
+        float: none;
+        margin: 0 auto;
+    }
+}

@@ -98,7 +98,7 @@
 body {
     padding-top: 6rem;
     min-height: 100vh;
-    background-image: url('data/backgruond.jpg');
+    background-image: url('data/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -248,4 +248,7 @@ body {
     color: #000000;
     text-align: left;
     line-height: 1.6;
+}
+.anti-strong {
+    font-weight: normal;
 }
