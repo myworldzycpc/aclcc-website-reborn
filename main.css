@@ -1,0 +1,251 @@
+@font-face
+{
+    font-family: '拾陆字濑户2.0';
+    src: url('data/fonts/拾陆字濑户2.0.ttf') format('truetype');
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'MPLUSRounded1c-Bold';
+    src: url('data/fonts/MPLUSRounded1c-Bold.ttf') format('truetype');
+    font-style: normal;
+}
+@font-face
+{
+    font-family: '站酷快乐体';
+    src: url('data/fonts/站酷快乐体.ttf') format('truetype');
+    font-style: normal;
+}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+.navbar {
+    background-color: #004297;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: all 0.3s ease;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+}
+.navbar-menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center
+}
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+.navbar-menu a:hover {
+    color: #ddd;
+}
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #004297;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+        /* 为了防止顶栏遮挡内容 */
+body {
+    padding-top: 6rem;
+    min-height: 100vh;
+    background-image: url('data/backgruond.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: '拾陆字濑户2.0', sans-serif;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.main-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #4a9eff;
+    font-weight: bold;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #aaa;
+    font-style: italic;
+}
+        
+.home-description {
+    font-size: 1.5rem;
+    color: #a0e6ff;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-decoration: none;
+}
+.footer {
+    font-family: 'MPLUSRounded1c-Bold', sans-serif;
+    font-size: 2rem;
+    color: #3FA9FF;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-decoration: none;
+    text-align: center;
+}
+/* 主标题样式 */
+.main-title {
+    font-size: 3rem;
+    text-align: center;
+    background: #0095ff;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: normal;
+    font-family: '站酷快乐体', sans-serif;
+}
+/* 默认隐藏移动端内容 */
+.mobile {
+  display: none;
+}
+
+/* 默认显示桌面端内容 */
+.desktop {
+  display: block;
+}
+
+/* 当屏幕宽度小于768px时，显示移动端内容，隐藏桌面端内容 */
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+}
+.curse-bg {
+    background: #0099ff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.curse-title {
+    margin: 0 0 12px 0;
+    text-align: left;
+    color: #ffffff;
+    font-weight: normal;
+    font-family: '站酷快乐体', sans-serif;
+}
+.curse-title-mobile {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    text-align: center;
+    font-weight: normal;
+    font-family: '站酷快乐体', sans-serif;
+}
+.curse-intro-1 {
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+.curse-intro-2 {
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+.desktop-style {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+/* 可伸缩列表（Accordion）简易样式，作用域限定在 curse-bg 内 */
+.curse-bg details {
+    background: #00c3ff;
+    padding: 4px 6px;
+    border: 0px solid rgba(0,0,0,0.06);
+}
+.curse-bg summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+    padding: 4px 0;
+    font-weight: normal;
+    outline: none;
+}
+.curse-bg details[open] {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.curse-bg .accordion-content {
+    padding-top: 8px;
+    color: #000000;
+    text-align: left;
+    line-height: 1.6;
+}
